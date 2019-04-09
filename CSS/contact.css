@@ -1,0 +1,15 @@
+.navbar-light .navbar-nav .nav-link{
+  color:#023894;
+  font-size: 16px;
+  font-weight: 600;
+}
+.bg-light{
+  /* background-color: #ffb805 !important */
+}
+.nav-link{
+  margin-right: 20px;
+}
+.navbar-brand{
+  /* margin-left:50px; */
+  margin-right: 30px;
+}
