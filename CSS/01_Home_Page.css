@@ -1,3 +1,6 @@
+
+font-family: 'Raleway', sans-serif;
+
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
@@ -5,7 +8,7 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 100%;
   position: relative;
   margin: auto;
 }
@@ -70,7 +73,7 @@ img {vertical-align: middle;}
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #7f2f2f2;
 }
 
 /* Fading animation */
@@ -94,4 +97,85 @@ img {vertical-align: middle;}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
+}
+
+@media (min-width: 768px) {
+
+  /* show 3 items */
+  .carouselPrograms .carousel-inner .active,
+  .carouselPrograms .carousel-inner .active + .carousel-item,
+  .carouselPrograms .carousel-inner .active + .carousel-item + .carousel-item {
+      display: block;
+  }
+
+  .carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+  .carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+      transition: none;
+  }
+
+  .carouselPrograms .carousel-inner .carousel-item-next,
+  .carouselPrograms .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+  }
+
+  .carouselPrograms .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      position: absolute;
+      top: 0;
+      right: -33.333%;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
+
+  /* left or forward direction */
+  .carouselPrograms .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item,
+  .carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+  .carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+  }
+
+  /* farthest right hidden item must be abso position for animations */
+  .carouselPrograms .carousel-inner .carousel-item-prev.carousel-item-right {
+      position: absolute;
+      top: 0;
+      left: 0%;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
+
+  /* right or prev direction */
+  .carouselPrograms .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+  .carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+      display: block;
+      visibility: visible;
+  }
+}
+
+.blog .carousel-indicators {
+	left: 0;
+	top: auto;
+    bottom: -40px;
+
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.blog .carousel-indicators .active {
+
 }

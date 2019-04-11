@@ -1,70 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="01_Home_Page.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="D:/WebInturn/Css/01_Home_Page.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
 
 </head>
 <body>
 
 <div class="slideshow-container">
 
-<div class="mySlides fade">
-  <img src="img/code_byte_digits_121341_1280x720.jpg" style="width:100%">
-  
-</div>
+    <div class="mySlides fade">
+    <a href="https://www.w3schools.com">
+    <img src="http://placehold.it/1280X720?text=1" style="width:100%">
+    </a>
+    </div>
 
-<div class="mySlides fade">
-  <img src="img/glitch_art_lines_pixels_121670_1280x720.jpg" style="width:100%">
-  
-</div>
+    <div class="mySlides fade">
+    <a href="https://www.youtube.com">
+    <img src="http://placehold.it/1280X720?text=2" style="width:100%">
+    </a>
+    </div>
 
-<div class="mySlides fade">
-  <img src="img/lines_diagonally_stripes_138182_1280x720.jpg" style="width:100%">
-  
-</div>
+    <div class="mySlides fade">
+    <a href="https://www.facebook.com">
+    <img src="http://placehold.it/1280X720?text=3" style="width:100%">
+    </a>
+    </div>
 
-<div class="mySlides fade">
-    <img src="img/lines_stripes_colorful_130458_1280x720.jpg" style="width:100%">
-    
-  </div>
+    <div class="mySlides fade">
+        <a href="https://www.google.com">
+        <img src="http://placehold.it/1280X720?text=4" style="width:100%">
+        </a>
+    </div>
 
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
+    <script>
+        var slideIndex = 1;
+        function plusSlides(n) {
+        showSlides(slideIndex + 1);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1};  
+            if (n < 1) {slideIndex = slides.length};
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "block";   
+            }
+            autoSlides();
+            function autoSlides(){
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            if(slideIndex >slides.length){slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";  
+            slideIndex++;
+            setTimeout(autoSlides,5000);
+            }
+    </script>
 </div>
 <br>
 
-
-
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
-
+</div>
 </body>
 </html> 
