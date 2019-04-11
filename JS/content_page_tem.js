@@ -82,4 +82,8 @@ var	$parent = $("#main"),
 			if($("html").hasClass(slideClass)){
 				killAside();
 			}
-		});
+        });
+        
+
+
+        
