@@ -1,103 +1,62 @@
-* {
-  box-sizing: boder-box;
+.thumbnail_container {
+  width: 77.5%;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  text-align: center;
 }
 
-body {
-  margin: 0;
-}
-
-#main {
+.img_container{
+  width: 4500px;
+  height: 500px;
   position: relative;
-  z-index: 20;
-  background: #fff;
-  -webkit-transition: -webkit-transform .6s ease;
-  transition: -webkit-transform .6s ease;
-  transition: transform .6s ease;
-  transition: transform .6s ease, -webkit-transform .6s ease;
-}
-h3{
-	font-family: 'Raleway', sans-serif;
-	margin: 0 0 50px;
-	text-align: center;
-	cursor: default;
+  transition: left 2s;
+  transition: right 2s;
+
 }
 
-
-@media (min-width: 640px) {
-  #main {
-    padding: 1em;
-  }
+.slide_image{
+  float: left;
+  margin: 0px;
+  padding: 0px;
 }
-.tiles-a {
-  width: 100%;
+
+.but_container_L{
+  top: -50%;
+  left: 2.5%;
+  float: left;
   position: relative;
-  overflow: hidden;
 }
-.tiles-a ul {
-  margin: 0;
-  padding: 0;
-}
-.tiles-a li {
-  list-style: none;
-}
-@media (min-width: 640px) {
-  .tiles-a li {
-    float: left;
-    width: 33.33%;
-  }
-}
-.tiles-a a {
-  margin: 1em;
-  display: block;
-  background: rgb(66, 66, 66);
-  padding-top: 73%;
-  height: 0;
+.but_container_R{
+  top: -50%;
+  right: 2.5%;
+  float: right;
+  position: relative;
 }
 
-#aside {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 60%;
-  height: 100%;
-  background: #eee;
-  overflow-y: scroll;
-  z-index: 0;
-}
-#aside img {
-  width: 100%;
-  height: auto;
-  vertical-align: top;
-}
-#aside .wrapper {
-  padding: 1em;
-}
-#aside .close {
-  max-width: 100%;
-  display: block;
-  position: absolute;
-  top: 1em;
-  right: 1em;
-  background-color: rgba(255, 0, 0, 0.5);
-  border-radius: 50%;
-  
+.slider_but_L{
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: aliceblue;
+  cursor: pointer; 
 }
 
-.show-detail {
-  overflow: hidden;
-}
-.show-detail #main {
-  -webkit-transform: translateX(-60%);
-          transform: translateX(-60%);
+.slider_but_R{
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: aliceblue; 
+  cursor: pointer;
 }
 
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
+#slider_image_L:target ~ .img_container{
+  right: 0%;
 }
+#slider_image_R:target ~ .img_container{
+  right: +100%;
+}
+
