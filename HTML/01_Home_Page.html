@@ -5,144 +5,333 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link href="D:/WebInturn/Css/01_Home_Page.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
 <div class="slideshow-container">
 
-    <div class="mySlides fade">
-        <a href="https://www.w3schools.com">
-            <img src="http://placehold.it/1280X720?text=1" style="width:100%;">
-        </a>
-    </div>
-
-    <div class="mySlides fade">
-        <a href="https://www.youtube.com">
-            <img src="http://placehold.it/1280X720?text=2" style="width:100%;">
-        </a>
-    </div>
-
-    <div class="mySlides fade">
-        <a href="https://www.facebook.com">
-            <img src="http://placehold.it/1280X720?text=3" style="width:100%;">
-        </a>
-    </div>
-
-    <div class="mySlides fade">
-        <a href="https://www.google.com">
-            <img src="http://placehold.it/1280X720?text=4" style="width:100%;">
-        </a>
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <script>
-        var slideIndex = 1;
-        function plusSlides(n) {
-        showSlides(slideIndex + 1);
-        }
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            if (n > slides.length) {slideIndex = 1};  
-            if (n < 1) {slideIndex = slides.length};
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slides[slideIndex-1].style.display = "block";   
-            }
-            autoSlides();
-            function autoSlides(){
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            if(slideIndex >slides.length){slideIndex = 1}
-            slides[slideIndex-1].style.display = "block";  
-            slideIndex++;
-            setTimeout(autoSlides,5000);
-            }
-    </script>
-</div>
-
-<br>
-<br>
-
-<div class="thumbnailcontainer">        
-    <div class="row">
-                <h1>Event and Activity</h1>
-    </div> 
-    <div class="row">
-        <div class="col-4">
-            <a href="https://www.facebook.com">
-                <div class="thumbnail"
-                    data-title="Title_1"
-                        data-description="Detail_1">
-                            <img src="http://placehold.it/500x500?text=1">
-                </div>
-            </a>
-        </div>    
-        <div class="col-4">
-            <a href="https://www.youtube.com">
-                <div class="thumbnail"
-                    data-title="Title_2"
-                        data-description="Detail_2">
-                            <img src="http://placehold.it/500x500?text=2">
-                </div>
-            </a>
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides ">
+            <img src="http://placehold.it/1280x500?text=1" style="width:100%">
         </div>
-        <div class="col-4">
-            <a href="https://www.google.com">
-            <div class="thumbnail"
-                data-title="Title_3"
-                    data-description="Detail_3">
-                        <img src="http://placehold.it/500x500?text=3">
+              
+        <div class="mySlides ">
+            <img src="http://placehold.it/1280x500?text=2" style="width:100%">
+        </div>
+              
+        <div class="mySlides ">
+            <img src="http://placehold.it/1280x500?text=3" style="width:100%">
+        </div>              
+                <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">
+            <div class="arrowL">
+                <div class="row"><span></span></div>
             </div>
-            </a>
-        </div>   
-    </div>
-    <br><br>
-    <div class="row">
-            <h1>Recommend Product</h1>
-    </div> 
-    <div class="row">
-        <div class="col-4">
-            <a href="https://www.facebook.com">
-                <div class="thumbnail"
-                    data-title="Title_1"
-                        data-description="Detail_1">
-                            <img src="http://placehold.it/500x500?text=1">
-                </div>
-            </a>
-        </div>    
-        <div class="col-4">
-            <a href="https://www.youtube.com">
-                <div class="thumbnail"
-                    data-title="Title_2"
-                        data-description="Detail_2">
-                            <img src="http://placehold.it/500x500?text=2">
-                </div>
-            </a>
-        </div>
-        <div class="col-4">
-            <a href="https://www.google.com">
-                <div class="thumbnail"
-                    data-title="Title_3"
-                        data-description="Detail_3">
-                            <img src="http://placehold.it/500x500?text=3">
-                </div>
-            </a>
-        </div>   
-    </div>        
+        </a>
+        <a class="next" onclick="plusSlides(1)">            
+            <div class="arrowR">
+                <div class="row"><span></span></div>
+            </div>
+        </a>
 </div>
+              <br>
+              
+              <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+      slideIndex = 1
+    } 
+  if (n < 1) {
+      slideIndex = slides.length
+    }
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<br>
+<br>
+<div class="row">
+        <h1>Event and Activity</h1>
+</div> 
+<div class="slides_menu-container">
+        <div class="slides_menu_1">
+            <div class="thumbnailcontainer">        
+                    <div class="row">
+                        <div class="col-4">
+                            <a href="https://www.facebook.com">
+                                <div class="thumbnail"
+                                    data-title="Title_1"
+                                        data-description="Detail_1">
+                                            <img src="http://placehold.it/500x500?text=1">
+                                </div>
+                            </a>
+                        </div>    
+                        <div class="col-4">
+                            <a href="https://www.youtube.com">
+                                <div class="thumbnail"
+                                    data-title="Title_2"
+                                        data-description="Detail_2">
+                                            <img src="http://placehold.it/500x500?text=2">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="https://www.google.com">
+                            <div class="thumbnail"
+                                data-title="Title_3"
+                                    data-description="Detail_3">
+                                        <img src="http://placehold.it/500x500?text=3">
+                            </div>
+                            </a>
+                        </div>   
+                    </div>
+                </div>   
+        </div>
+        <div class="slides_menu_1">
+                <div class="thumbnailcontainer">        
+                        <div class="row">
+                            <div class="col-4">
+                                <a href="https://www.facebook.com">
+                                    <div class="thumbnail"
+                                        data-title="Title_1"
+                                            data-description="Detail_1">
+                                                <img src="http://placehold.it/500x500?text=4">
+                                    </div>
+                                </a>
+                            </div>    
+                            <div class="col-4">
+                                <a href="https://www.youtube.com">
+                                    <div class="thumbnail"
+                                        data-title="Title_2"
+                                            data-description="Detail_2">
+                                                <img src="http://placehold.it/500x500?text=5">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://www.google.com">
+                                <div class="thumbnail"
+                                    data-title="Title_3"
+                                        data-description="Detail_3">
+                                            <img src="http://placehold.it/500x500?text=6">
+                                </div>
+                                </a>
+                            </div>   
+                        </div>
+                    </div>   
+            </div>
+            <div class="slides_menu_1">
+                    <div class="thumbnailcontainer">        
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="https://www.facebook.com">
+                                        <div class="thumbnail"
+                                            data-title="Title_1"
+                                                data-description="Detail_1">
+                                                    <img src="http://placehold.it/500x500?text=7">
+                                        </div>
+                                    </a>
+                                </div>    
+                                <div class="col-4">
+                                    <a href="https://www.youtube.com">
+                                        <div class="thumbnail"
+                                            data-title="Title_2"
+                                                data-description="Detail_2">
+                                                    <img src="http://placehold.it/500x500?text=8">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://www.google.com">
+                                    <div class="thumbnail"
+                                        data-title="Title_3"
+                                            data-description="Detail_3">
+                                                <img src="http://placehold.it/500x500?text=9">
+                                    </div>
+                                    </a>
+                                </div>   
+                            </div>
+                        </div>   
+            </div>    
+          
+        <a class="prev_menu" onclick="plusSlides_slides_menu(-1, 0)">&#10094;</a>
+        <a class="next_menu" onclick="plusSlides_slides_menu(1, 0)">&#10095;</a>
+    </div>
+
+ <br><br>   
+ <div class="row">
+        <h1>Reccoment Shops</h1>
+</div> 
+<div class="slides_menu-container">
+
+    <div class="slides_menu_2">
+        <div class="thumbnailcontainer">        
+                <div class="row">
+                    <div class="col-4">
+                        <a href="https://www.facebook.com">
+                            <div class="thumbnail"
+                                data-title="Title_1"
+                                    data-description="Detail_1">
+                                        <img src="http://placehold.it/500x500?text=1">
+                            </div>
+                        </a>
+                    </div>    
+                    <div class="col-4">
+                        <a href="https://www.youtube.com">
+                            <div class="thumbnail"
+                                data-title="Title_2"
+                                    data-description="Detail_2">
+                                        <img src="http://placehold.it/500x500?text=2">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="https://www.google.com">
+                        <div class="thumbnail"
+                            data-title="Title_3"
+                                data-description="Detail_3">
+                                    <img src="http://placehold.it/500x500?text=3">
+                        </div>
+                        </a>
+                    </div>   
+                </div>
+            </div>   
+    </div>
+    <div class="slides_menu_2">
+            <div class="thumbnailcontainer">        
+                    <div class="row">
+                        <div class="col-4">
+                            <a href="https://www.facebook.com">
+                                <div class="thumbnail"
+                                    data-title="Title_1"
+                                        data-description="Detail_1">
+                                            <img src="http://placehold.it/500x500?text=4">
+                                </div>
+                            </a>
+                        </div>    
+                        <div class="col-4">
+                            <a href="https://www.youtube.com">
+                                <div class="thumbnail"
+                                    data-title="Title_2"
+                                        data-description="Detail_2">
+                                            <img src="http://placehold.it/500x500?text=5">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="https://www.google.com">
+                            <div class="thumbnail"
+                                data-title="Title_3"
+                                    data-description="Detail_3">
+                                        <img src="http://placehold.it/500x500?text=6">
+                            </div>
+                            </a>
+                        </div>   
+                    </div>
+                </div>   
+    </div>
+    <div class="slides_menu_2">
+            <div class="thumbnailcontainer">        
+                    <div class="row">
+                        <div class="col-4">
+                            <a href="https://www.facebook.com">
+                                <div class="thumbnail"
+                                    data-title="Title_1"
+                                        data-description="Detail_1">
+                                            <img src="http://placehold.it/500x500?text=7">
+                                </div>
+                            </a>
+                        </div>    
+                        <div class="col-4">
+                            <a href="https://www.youtube.com">
+                                <div class="thumbnail"
+                                    data-title="Title_2"
+                                        data-description="Detail_2">
+                                            <img src="http://placehold.it/500x500?text=8">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="https://www.google.com">
+                            <div class="thumbnail"
+                                data-title="Title_3"
+                                    data-description="Detail_3">
+                                        <img src="http://placehold.it/500x500?text=9">
+                            </div>
+                            </a>
+                        </div>   
+                    </div>
+                </div>   
+    </div>
+
+      
+    <a class="prev_menu" onclick="plusSlides_slides_menu(-1, 1)">&#10094;</a>
+    <a class="next_menu" onclick="plusSlides_slides_menu(1, 1)">&#10095;</a>
+</div>
+      
+      
+      <script>
+      var slides_menuIndex = [1,1];
+      var slideId = ["slides_menu_1", "slides_menu_2"]
+      
+      showSlides_2(1, 0);
+      showSlides_2(1, 1);
+      
+      function plusSlides_slides_menu(n, no) {
+        showSlides_2(slides_menuIndex[no] += n, no);
+      }
+      
+      function showSlides_2(n, no) {
+        var i;
+        var slides_menu = document.getElementsByClassName(slideId[no]);
+        if (n > slides_menu.length) {
+            slides_menuIndex[no] = 1
+        }    
+        if (n < 1) {
+            slides_menuIndex[no] = slides_menu.length
+        }
+        for (i = 0; i < slides_menu.length; i++) {
+            slides_menu[i].style.display = "none";  
+        }
+        slides_menu[slides_menuIndex[no]-1].style.display = "block";  
+      }
+      </script>
 <br><br>
 
 
